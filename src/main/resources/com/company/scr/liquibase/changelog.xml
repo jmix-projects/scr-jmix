@@ -4,6 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <property name="byte.array.type" dbms="hsqldb" value="BLOB"/>
 
     <includeAll path="/com/company/scr/liquibase/changelog"/>
 
