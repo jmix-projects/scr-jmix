@@ -1,0 +1,140 @@
+<fetchPlans xmlns="http://jmix.io/schema/core/fetch-plans">
+
+    <fetchPlan class="com.company.scr.entity.Car"
+          extends="_local"
+          name="car-edit">
+        <property name="garage"
+                  fetchPlan="_instance_name"/>
+        <property name="technicalCertificate"
+                  fetchPlan="_instance_name"/>
+<!--        <property name="photo" fetchPlan="_instance_name"/>-->
+    </fetchPlan>
+    <fetchPlan class="com.company.scr.entity.FavoriteCar"
+          extends="_local"
+          name="favoriteCar-view">
+        <property name="car"
+                  fetchPlan="_instance_name"/>
+        <property name="user"
+                  fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan class="com.company.scr.entity.FavoriteCar"
+          extends="_local"
+          name="favoriteCar-edit">
+        <property name="car"
+                  fetchPlan="_instance_name"/>
+        <property name="user"
+                  fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan class="com.company.scr.entity.CarRent"
+          extends="_local"
+          name="carRent-edit">
+        <property name="car"
+                  fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr$SparePart" name="sparePart-view" extends="_local">
+        <property name="spareParts" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_DatatypesTestEntity" name="datatypesTestEntity-view" extends="_local">
+        <property name="associationO2Oattr" fetchPlan="_instance_name"/>
+        <property name="associationO2Mattr" fetchPlan="_instance_name"/>
+        <property name="associationM2Oattr" fetchPlan="_instance_name"/>
+        <property name="associationM2Mattr" fetchPlan="_instance_name"/>
+        <property name="compositionO2Oattr" fetchPlan="_instance_name">
+            <property name="quantity"/>
+        </property>
+        <property name="compositionO2Mattr" fetchPlan="_instance_name">
+            <property name="datatypesTestEntity" fetchPlan="_instance_name"/>
+            <property name="quantity"/>
+        </property>
+        <property name="intIdentityIdTestEntityAssociationO2OAttr" fetchPlan="_instance_name"/>
+        <property name="integerIdTestEntityAssociationM2MAttr" fetchPlan="_instance_name"/>
+        <property name="stringIdTestEntityAssociationO2O" fetchPlan="_instance_name"/>
+        <property name="stringIdTestEntityAssociationM2O" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_AssociationM2MTestEntity" name="associationM2MTestEntity-view" extends="_local">
+        <property name="datatypesTestEntities" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_AssociationM2OTestEntity" name="associationM2OTestEntity-view" extends="_local"/>
+    <fetchPlan entity="scr_AssociationO2MTestEntity" name="associationO2MTestEntity-view" extends="_local">
+        <property name="datatypesTestEntity" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_AssociationO2OTestEntity" name="associationO2OTestEntity-view" extends="_local">
+        <property name="datatypesTestEntity" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_CompositionO2MTestEntity" name="compositionO2MTestEntity-view" extends="_local">
+        <property name="datatypesTestEntity" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_CompositionO2OTestEntity" name="compositionO2OTestEntity-view" extends="_local">
+        <property name="nestedComposition" fetchPlan="_instance_name">
+            <property name="associationO2Oattr" fetchPlan="_instance_name"/>
+        </property>
+    </fetchPlan>
+    <fetchPlan entity="scr_DeeplyNestedTestEntity" name="deeplyNestedTestEntity-view" extends="_local">
+        <property name="associationO2Oattr" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_DatatypesTestEntity2" name="datatypesTestEntity2-view" extends="_local">
+        <property name="datatypesTestEntityAttr" fetchPlan="_instance_name">
+            <property name="bigDecimalAttr"/>
+            <property name="booleanAttr"/>
+<!--            <property name="byteArrayAttr"/>-->
+            <property name="dateAttr"/>
+            <property name="dateTimeAttr"/>
+            <property name="doubleAttr"/>
+            <property name="integerAttr"/>
+            <property name="longAttr"/>
+            <property name="stringAttr"/>
+            <property name="timeAttr"/>
+            <property name="uuidAttr"/>
+            <property name="localDateTimeAttr"/>
+            <property name="offsetDateTimeAttr"/>
+            <property name="localDateAttr"/>
+            <property name="localTimeAttr"/>
+            <property name="offsetTimeAttr"/>
+            <property name="enumAttr"/>
+            <property name="associationO2Oattr" fetchPlan="_instance_name"/>
+            <property name="associationO2Mattr" fetchPlan="_instance_name"/>
+            <property name="associationM2Oattr" fetchPlan="_instance_name"/>
+            <property name="associationM2Mattr" fetchPlan="_instance_name"/>
+            <property name="compositionO2Oattr" fetchPlan="_instance_name"/>
+            <property name="compositionO2Mattr" fetchPlan="_instance_name"/>
+            <property name="readOnlyStringAttr"/>
+        </property>
+        <property name="intIdentityIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="integerIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="stringIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="weirdStringIdTestEntityAttr" fetchPlan="_instance_name"/>
+    </fetchPlan>
+    <fetchPlan entity="scr_DatatypesTestEntity3" name="datatypesTestEntity3-view" extends="_local">
+        <property name="datatypesTestEntityAttr" fetchPlan="_instance_name">
+            <property name="bigDecimalAttr"/>
+            <property name="booleanAttr"/>
+<!--            <property name="byteArrayAttr"/>-->
+            <property name="dateAttr"/>
+            <property name="dateTimeAttr"/>
+            <property name="doubleAttr"/>
+            <property name="integerAttr"/>
+            <property name="longAttr"/>
+            <property name="stringAttr"/>
+            <property name="timeAttr"/>
+            <property name="uuidAttr"/>
+            <property name="localDateTimeAttr"/>
+            <property name="offsetDateTimeAttr"/>
+            <property name="localDateAttr"/>
+            <property name="localTimeAttr"/>
+            <property name="offsetTimeAttr"/>
+            <property name="enumAttr"/>
+            <property name="associationO2Oattr" fetchPlan="_instance_name"/>
+            <property name="associationO2Mattr" fetchPlan="_instance_name"/>
+            <property name="associationM2Oattr" fetchPlan="_instance_name"/>
+            <property name="associationM2Mattr" fetchPlan="_instance_name"/>
+            <property name="compositionO2Oattr" fetchPlan="_instance_name"/>
+            <property name="compositionO2Mattr" fetchPlan="_instance_name"/>
+            <property name="readOnlyStringAttr"/>
+        </property>
+        <property name="integerIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="intIdentityIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="stringIdTestEntityAttr" fetchPlan="_instance_name"/>
+        <property name="weirdStringIdTestEntityAttr" fetchPlan="_instance_name"/>
+    </fetchPlan>
+
+</fetchPlans>
