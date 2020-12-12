@@ -32,6 +32,7 @@ dependencies {
     implementation 'io.jmix.security:jmix-security-ui-starter'
     implementation 'io.jmix.security:jmix-security-data-starter'
     implementation 'io.jmix.rest:jmix-rest-starter'
+    implementation 'io.jmix.fsfilestorage:jmix-fsfilestorage-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
