@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://carBrowse.caption"
+        focusComponent="carsTable">
+    <data readOnly="true">
+        <collection id="carsDc"
+                    class="com.company.scr.entity.Car">
+            <fetchPlan extends="_local"/>
+            <loader id="carsDl">
+                <query>
+                    <![CDATA[select e from scr$Car e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <groupTable id="carsTable"
+                    width="100%"
+                    dataContainer="carsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="manufacturer"/>
+                <column id="model"/>
+                <column id="regNumber"/>
+                <column id="purchaseDate"/>
+                <column id="manufactureDate"/>
+                <column id="wheelOnRight"/>
+                <column id="carType"/>
+                <column id="ecoRank"/>
+                <column id="maxPassengers"/>
+                <column id="price"/>
+                <column id="mileage"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="carsTable.create"/>
+                <button id="editBtn" action="carsTable.edit"/>
+                <button id="removeBtn" action="carsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
