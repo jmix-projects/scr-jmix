@@ -5,7 +5,19 @@
     <data>
         <instance id="carDc"
                   class="com.company.scr.entity.Car">
-            <fetchPlan extends="_local"/>
+            <fetchPlan extends="_local">
+                <property name="garage" fetchPlan="_instance_name">
+                    <property name="name"/>
+                    <property name="address"/>
+                    <property name="capacity"/>
+                    <property name="vanEntry"/>
+                    <property name="workingHoursFrom"/>
+                    <property name="workingHoursTo"/>
+                </property>
+                <property name="technicalCertificate" fetchPlan="_instance_name">
+                    <property name="certNumber"/>
+                </property>
+            </fetchPlan>
             <loader/>
         </instance>
     </data>
@@ -26,9 +38,21 @@
                     <checkBox id="wheelOnRightField" property="wheelOnRight"/>
                     <comboBox id="carTypeField" property="carType"/>
                     <comboBox id="ecoRankField" property="ecoRank"/>
+                    <entityPicker id="garageField" property="garage">
+                        <actions>
+                            <action id="lookup" type="entity_lookup"/>
+                            <action id="clear" type="entity_clear"/>
+                        </actions>
+                    </entityPicker>
                     <textField id="maxPassengersField" property="maxPassengers"/>
                     <textField id="priceField" property="price"/>
                     <textField id="mileageField" property="mileage"/>
+                    <entityPicker id="technicalCertificateField" property="technicalCertificate">
+                        <actions>
+                            <action id="lookup" type="entity_lookup"/>
+                            <action id="clear" type="entity_clear"/>
+                        </actions>
+                    </entityPicker>
                 </column>
             </form>
         </scrollBox>

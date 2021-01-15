@@ -6,7 +6,19 @@
     <data readOnly="true">
         <collection id="carsDc"
                     class="com.company.scr.entity.Car">
-            <fetchPlan extends="_local"/>
+            <fetchPlan extends="_local">
+                <property name="garage" fetchPlan="_instance_name">
+                    <property name="name"/>
+                    <property name="address"/>
+                    <property name="capacity"/>
+                    <property name="vanEntry"/>
+                    <property name="workingHoursFrom"/>
+                    <property name="workingHoursTo"/>
+                </property>
+                <property name="technicalCertificate" fetchPlan="_instance_name">
+                    <property name="certNumber"/>
+                </property>
+            </fetchPlan>
             <loader id="carsDl">
                 <query>
                     <![CDATA[select e from scr$Car e]]>
@@ -37,9 +49,11 @@
                 <column id="wheelOnRight"/>
                 <column id="carType"/>
                 <column id="ecoRank"/>
+                <column id="garage"/>
                 <column id="maxPassengers"/>
                 <column id="price"/>
                 <column id="mileage"/>
+                <column id="technicalCertificate"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
