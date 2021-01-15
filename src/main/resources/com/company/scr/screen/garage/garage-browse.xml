@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://garageBrowse.caption"
+        focusComponent="garagesTable">
+    <data readOnly="true">
+        <collection id="garagesDc"
+                    class="com.company.scr.entity.Garage">
+            <fetchPlan extends="_local">
+                <property name="personnel" fetchPlan="_instance_name">
+                    <property name="username"/>
+                    <property name="password"/>
+                    <property name="firstName"/>
+                    <property name="lastName"/>
+                    <property name="email"/>
+                    <property name="enabled"/>
+                    <property name="phone"/>
+                </property>
+                <property name="currentCars" fetchPlan="_instance_name">
+                    <property name="manufacturer"/>
+                    <property name="model"/>
+                    <property name="regNumber"/>
+                    <property name="purchaseDate"/>
+                    <property name="manufactureDate"/>
+                    <property name="wheelOnRight"/>
+                    <property name="carType"/>
+                    <property name="ecoRank"/>
+                    <property name="maxPassengers"/>
+                    <property name="price"/>
+                    <property name="mileage"/>
+                    <property name="technicalCertificate" fetchPlan="_instance_name">
+                        <property name="certNumber"/>
+                    </property>
+                </property>
+            </fetchPlan>
+            <loader id="garagesDl">
+                <query>
+                    <![CDATA[select e from scr$Garage e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <groupTable id="garagesTable"
+                    width="100%"
+                    dataContainer="garagesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="address"/>
+                <column id="capacity"/>
+                <column id="vanEntry"/>
+                <column id="workingHoursFrom"/>
+                <column id="workingHoursTo"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="garagesTable.create"/>
+                <button id="editBtn" action="garagesTable.edit"/>
+                <button id="removeBtn" action="garagesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
