@@ -6,16 +6,7 @@
         <instance id="garageDc"
                   class="com.company.scr.entity.Garage">
             <fetchPlan extends="_local">
-                <property name="personnel" fetchPlan="_instance_name">
-                    <property name="username"/>
-                    <property name="password"/>
-                    <property name="firstName"/>
-                    <property name="lastName"/>
-                    <property name="email"/>
-                    <property name="enabled"/>
-                    <property name="phone"/>
-                </property>
-                <property name="currentCars" fetchPlan="_instance_name">
+                <property name="cars" fetchPlan="_instance_name">
                     <property name="manufacturer"/>
                     <property name="model"/>
                     <property name="regNumber"/>
@@ -27,9 +18,15 @@
                     <property name="maxPassengers"/>
                     <property name="price"/>
                     <property name="mileage"/>
-                    <property name="technicalCertificate" fetchPlan="_instance_name">
-                        <property name="certNumber"/>
-                    </property>
+                </property>
+                <property name="personnel" fetchPlan="_instance_name">
+                    <property name="username"/>
+                    <property name="password"/>
+                    <property name="firstName"/>
+                    <property name="lastName"/>
+                    <property name="email"/>
+                    <property name="enabled"/>
+                    <property name="phone"/>
                 </property>
             </fetchPlan>
             <loader/>

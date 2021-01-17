@@ -22,6 +22,9 @@ public class Garage {
     @Column(name = "ID", nullable = false)
     private UUID id;
 
+    @OneToMany(mappedBy = "garage")
+    private List<Car> cars;
+
     public UUID getId() {
         return id;
     }
@@ -59,6 +62,14 @@ public class Garage {
     @Transient
     @JmixProperty
     protected List<Car> currentCars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
     public List<Car> getCurrentCars() {
         return currentCars;
