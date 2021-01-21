@@ -36,6 +36,7 @@ dependencies {
     implementation 'io.jmix.graphql:jmix-graphql-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.graphql-java-kickstart:graphql-java-servlet:9.1.0'
 
     runtimeOnly 'org.postgresql:postgresql:42.2.9'
     runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.1'
