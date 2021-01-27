@@ -5,6 +5,8 @@
         <item screen="scr_User.browse" caption="msg://com.company.scr.screen.user/UserBrowse.caption"/>
         <item screen="scr$Car.browse" caption="msg://com.company.scr.screen.car/carBrowse.caption"/>
         <item screen="scr$Garage.browse" caption="msg://com.company.scr.screen.garage/garageBrowse.caption"/>
+        <item screen="scr$TechnicalCertificate.browse"
+              caption="msg://com.company.scr.screen.technicalcertificate/technicalCertificateBrowse.caption"/>
     </menu>
 
 </menu-config>
