@@ -15,6 +15,7 @@
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="anonymous"/>
             <column name="ROLE_CODE" value="system-full-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
         </insert>
     </changeSet>
 

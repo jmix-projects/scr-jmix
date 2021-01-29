@@ -529,9 +529,6 @@
                                  constraintName="FK_SCR_WEIRD_STRING_ID_TEST_ENTITY_ON_DATATYPES_TEST_ENTITY3"
                                  referencedColumnNames="ID" referencedTableName="SCR_DATATYPES_TEST_ENTITY3"/>
     </changeSet>
-    <changeSet author="scr" id="59">
-        <dropIndex indexName="idx_sec_role_uniq_name" tableName="sec_role_entity"/>
-    </changeSet>
     <changeSet id="60" author="scr-jmix">
 
         <insert tableName="SCR_USER">
@@ -551,6 +548,7 @@
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="admin"/>
             <column name="ROLE_CODE" value="system-full-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
         </insert>
 
     </changeSet>
