@@ -8,5 +8,10 @@
         <item screen="scr$TechnicalCertificate.browse"
               caption="msg://com.company.scr.screen.technicalcertificate/technicalCertificateBrowse.caption"/>
     </menu>
+    <menu id="sales" caption="msg:///menu_config.sales" insertBefore="administration">
+        <item screen="scr_Customer.browse" caption="msg://com.company.scr.screen.customer/customerBrowse.caption"/>
+        <item screen="scr_Product.browse" caption="msg://com.company.scr.screen.product/productBrowse.caption"/>
+        <item screen="scr_Order.browse" caption="msg://com.company.scr.screen.order/orderBrowse.caption"/>
+    </menu>
 
 </menu-config>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://productEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="productDc"
+                  class="com.company.scr.entity.sales.Product">
+            <fetchPlan extends="_local">
+                <property name="car" fetchPlan="_instance_name"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="editActions">
+        <form id="form" dataContainer="productDc">
+            <column width="350px">
+                <entityPicker id="carField" property="car">
+                    <actions>
+                        <action id="lookup" type="entity_lookup"/>
+                        <action id="clear" type="entity_clear"/>
+                    </actions>
+                </entityPicker>
+                <textField id="priceField" property="price"/>
+                <checkBox id="specialField" property="special"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

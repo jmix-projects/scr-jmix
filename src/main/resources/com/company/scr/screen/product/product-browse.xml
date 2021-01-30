@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://productBrowse.caption"
+        focusComponent="productsTable">
+    <data readOnly="true">
+        <collection id="productsDc"
+                    class="com.company.scr.entity.sales.Product">
+            <fetchPlan extends="_local">
+                <property name="car" fetchPlan="_instance_name"/>
+            </fetchPlan>
+            <loader id="productsDl">
+                <query>
+                    <![CDATA[select e from scr_Product e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <groupTable id="productsTable"
+                    width="100%"
+                    dataContainer="productsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="car"/>
+                <column id="price"/>
+                <column id="special"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="productsTable.create"/>
+                <button id="editBtn" action="productsTable.edit"/>
+                <button id="removeBtn" action="productsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

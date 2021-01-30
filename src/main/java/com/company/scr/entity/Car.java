@@ -219,7 +219,7 @@ public class Car {
     @InstanceName
     @DependsOnProperties({"manufacturer", "model"})
     public String getDisplayName() {
-        return String.format("%s - %s [%s]", manufacturer, model);
+        return String.format("%s - %s", manufacturer, model);
     }
 
 }
