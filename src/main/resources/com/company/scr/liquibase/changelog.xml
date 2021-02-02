@@ -19,5 +19,8 @@
         </insert>
     </changeSet>
 
+    <changeSet id="data" author="scr">
+        <sqlFile path="data.sql" relativeToChangelogFile="true" stripComments="true"/>
+    </changeSet>
 
 </databaseChangeLog>
