@@ -37,6 +37,7 @@
                 <action id="refresh" type="refresh"/>
             </actions>
             <columns>
+                <column id="username"/>
                 <column id="firstName"/>
                 <column id="lastName"/>
                 <column id="email"/>

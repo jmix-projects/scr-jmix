@@ -9,6 +9,10 @@ import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 import io.jmix.core.validation.group.RestApiChecks;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -27,15 +31,6 @@ public class Car {
     @Id
     @Column(name = "ID", nullable = false)
     private UUID id;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
 
     @NotNull(message = "{msg://com.company.scr.entity/manufacturerEmpty}", groups = {RestApiChecks.class})
     @Column(name = "MANUFACTURER", nullable = false)
@@ -90,6 +85,77 @@ public class Car {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TECHNICAL_CERTIFICATE_ID")
     protected TechnicalCertificate technicalCertificate;
+
+    @Column(name = "VERSION", nullable = false)
+    @Version
+    private Integer version;
+
+    @CreatedBy
+    @Column(name = "CREATED_BY")
+    private String createdBy;
+
+    @CreatedDate
+    @Column(name = "CREATED_DATE")
+    @Temporal(TemporalType.DATE)
+    private Date createdDate;
+
+    @LastModifiedBy
+    @Column(name = "LAST_MODIFIED_BY")
+    private String lastModifiedBy;
+
+    @LastModifiedDate
+    @Column(name = "LAST_MODIFIED_DATE")
+    @Temporal(TemporalType.DATE)
+    private Date lastModifiedDate;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+
+    public Date getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(Date lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedBy() {
+        return lastModifiedBy;
+    }
+
+    public void setLastModifiedBy(String lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "PHOTO_ID")
