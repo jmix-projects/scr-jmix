@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://datatypesTestEntityEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="datatypesTestEntityDc"
+                  class="com.company.scr.entity.test.DatatypesTestEntity">
+            <fetchPlan extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="editActions">
+        <scrollBox id="scrollBox" spacing="true">
+            <form id="form" dataContainer="datatypesTestEntityDc">
+                <column width="350px">
+                    <textField id="bigDecimalAttrField" property="bigDecimalAttr"/>
+                    <checkBox id="booleanAttrField" property="booleanAttr"/>
+                    <dateField id="dateAttrField" property="dateAttr"/>
+                    <dateField id="dateTimeAttrField" property="dateTimeAttr"/>
+                    <textField id="doubleAttrField" property="doubleAttr"/>
+                    <textField id="integerAttrField" property="integerAttr"/>
+                    <textField id="longAttrField" property="longAttr"/>
+                    <textField id="stringAttrField" property="stringAttr"/>
+                    <timeField id="timeAttrField" property="timeAttr"/>
+                    <maskedField id="uuidAttrField" mask="hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh" property="uuidAttr"/>
+                    <dateField id="localDateTimeAttrField" property="localDateTimeAttr"/>
+                    <dateField id="offsetDateTimeAttrField" property="offsetDateTimeAttr"/>
+                    <dateField id="localDateAttrField" property="localDateAttr"/>
+                    <timeField id="localTimeAttrField" property="localTimeAttr"/>
+                    <timeField id="offsetTimeAttrField" property="offsetTimeAttr"/>
+                    <comboBox id="enumAttrField" property="enumAttr"/>
+                    <textField id="nameField" property="name"/>
+                    <textField id="readOnlyStringAttrField" property="readOnlyStringAttr"/>
+                </column>
+            </form>
+        </scrollBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

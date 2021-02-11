@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://datatypesTestEntityBrowse.caption"
+        focusComponent="datatypesTestEntitiesTable">
+    <data readOnly="true">
+        <collection id="datatypesTestEntitiesDc"
+                    class="com.company.scr.entity.test.DatatypesTestEntity">
+            <fetchPlan extends="_local"/>
+            <loader id="datatypesTestEntitiesDl">
+                <query>
+                    <![CDATA[select e from scr_DatatypesTestEntity e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <groupTable id="datatypesTestEntitiesTable"
+                    width="100%"
+                    dataContainer="datatypesTestEntitiesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="bigDecimalAttr"/>
+                <column id="booleanAttr"/>
+                <column id="dateAttr"/>
+                <column id="dateTimeAttr"/>
+                <column id="doubleAttr"/>
+                <column id="integerAttr"/>
+                <column id="longAttr"/>
+                <column id="stringAttr"/>
+                <column id="timeAttr"/>
+                <column id="uuidAttr"/>
+                <column id="localDateTimeAttr"/>
+                <column id="offsetDateTimeAttr"/>
+                <column id="localDateAttr"/>
+                <column id="localTimeAttr"/>
+                <column id="offsetTimeAttr"/>
+                <column id="enumAttr"/>
+                <column id="name"/>
+                <column id="readOnlyStringAttr"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="datatypesTestEntitiesTable.create"/>
+                <button id="editBtn" action="datatypesTestEntitiesTable.edit"/>
+                <button id="removeBtn" action="datatypesTestEntitiesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
