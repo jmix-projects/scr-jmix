@@ -10,7 +10,7 @@
 
 <!--  TODO remove after security will be configured in jmix-graphql -->
     <changeSet id="4" author="testappl">
-        <insert tableName="SEC_ROLE_ASSIGNMENT_ENTITY">
+        <insert tableName="SEC_ROLE_ASSIGNMENT">
             <column name="ID" value="cb3bc6c0-1dd9-415e-adb3-a58481eae630"/>
             <column name="VERSION" value="1"/>
             <column name="USERNAME" value="anonymous"/>
