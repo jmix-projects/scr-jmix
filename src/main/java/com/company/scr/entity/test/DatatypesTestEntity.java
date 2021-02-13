@@ -23,22 +23,11 @@ public class DatatypesTestEntity {
     @Column(name = "ID", nullable = false)
     private UUID id;
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
     @Column(name = "BIG_DECIMAL_ATTR")
     protected BigDecimal bigDecimalAttr;
 
     @Column(name = "BOOLEAN_ATTR")
     protected Boolean booleanAttr;
-//
-//    @Column(name = "BYTE_ARRAY_ATTR")
-//    protected byte[] byteArrayAttr;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_ATTR")
@@ -60,9 +49,20 @@ public class DatatypesTestEntity {
     @Column(name = "STRING_ATTR")
     protected String stringAttr;
 
-    @Temporal(TemporalType.TIME)
     @Column(name = "TIME_ATTR")
-    protected Date timeAttr;
+    private Time timeAttr;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    //
+//    @Column(name = "BYTE_ARRAY_ATTR")
+//    protected byte[] byteArrayAttr;
 
     @Column(name = "UUID_ATTR")
     protected UUID uuidAttr;
@@ -140,6 +140,14 @@ public class DatatypesTestEntity {
 
     @Column(name = "READ_ONLY_STRING_ATTR")
     protected String readOnlyStringAttr;
+
+    public Time getTimeAttr() {
+        return timeAttr;
+    }
+
+    public void setTimeAttr(Time timeAttr) {
+        this.timeAttr = timeAttr;
+    }
 
     public String getReadOnlyStringAttr() {
         return readOnlyStringAttr;
