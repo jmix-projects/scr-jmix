@@ -27,18 +27,12 @@ sudo -u postgres pg_dump --table=<TABLE_NAME> --data-only --column-inserts scr-j
 
 ## GraphQL filter usage example
 ```
-query {
-  carList(limit: 2, sort: "+carType", 
-    filter: {
-        conditions: [{
-          property: "manufacturer"
-          operator: "="
-          value: "LADA"
-        }]
-    }) {
-    id,
-    manufacturer,
-    carType
+{
+  carCount
+  carList(limit: 10, offset: 0, orderBy: {createdDate: ASC}, filter: [{manufacturer: {EQ: "Mercedes"}}]) {
+    id
+    manufacturer
+    model
   }
 }
 ```
