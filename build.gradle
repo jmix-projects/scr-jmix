@@ -33,7 +33,7 @@ dependencies {
     implementation 'io.jmix.security:jmix-security-ui-starter'
     implementation 'io.jmix.security:jmix-security-data-starter'
     implementation 'io.jmix.rest:jmix-rest-starter'
-    implementation project(':graphql-starter')
+    implementation 'io.jmix.graphql:jmix-graphql-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
