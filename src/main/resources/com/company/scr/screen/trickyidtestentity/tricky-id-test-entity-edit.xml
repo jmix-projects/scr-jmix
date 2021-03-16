@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://trickyIdTestEntityEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="trickyIdTestEntityDc"
+                  class="com.company.scr.entity.test.ids.TrickyIdTestEntity">
+            <fetchPlan extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="editActions">
+        <form id="form" dataContainer="trickyIdTestEntityDc">
+            <column width="350px">
+                <textField id="otherAttrField" property="otherAttr"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

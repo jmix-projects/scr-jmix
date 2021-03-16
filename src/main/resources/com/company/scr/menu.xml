@@ -9,6 +9,8 @@
               caption="msg://com.company.scr.screen.technicalcertificate/technicalCertificateBrowse.caption"/>
         <item screen="scr_DatatypesTestEntity.browse"
               caption="msg://com.company.scr.screen.datatypestestentity/datatypesTestEntityBrowse.caption"/>
+        <item screen="scr_TrickyIdTestEntity.browse"
+              caption="msg://com.company.scr.screen.trickyidtestentity/trickyIdTestEntityBrowse.caption"/>
     </menu>
     <menu id="sales" caption="msg:///menu_config.sales" insertBefore="administration">
         <item screen="scr_Customer.browse" caption="msg://com.company.scr.screen.customer/customerBrowse.caption"/>

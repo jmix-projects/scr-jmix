@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://trickyIdTestEntityBrowse.caption"
+        focusComponent="trickyIdTestEntitiesTable">
+    <data readOnly="true">
+        <collection id="trickyIdTestEntitiesDc"
+                    class="com.company.scr.entity.test.ids.TrickyIdTestEntity">
+            <fetchPlan extends="_local"/>
+            <loader id="trickyIdTestEntitiesDl">
+                <query>
+                    <![CDATA[select e from scr_TrickyIdTestEntity e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="trickyIdTestEntitiesTable" spacing="true">
+        <filter id="filter"
+                dataLoader="trickyIdTestEntitiesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="trickyIdTestEntitiesTable"
+                    width="100%"
+                    dataContainer="trickyIdTestEntitiesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="otherAttr"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="trickyIdTestEntitiesTable.create"/>
+                <button id="editBtn" action="trickyIdTestEntitiesTable.edit"/>
+                <button id="removeBtn" action="trickyIdTestEntitiesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
