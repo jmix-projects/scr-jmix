@@ -1,5 +1,6 @@
 package com.company.scr.entity.test.ids;
 
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 public class TrickyIdTestEntity {
 
     @Column(name = "TRICKY_ID", nullable = false)
+    @JmixGeneratedValue
     @Id
     private Long trickyId;
 
