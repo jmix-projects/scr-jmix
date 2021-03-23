@@ -54,6 +54,7 @@
                 <column id="price"/>
                 <column id="mileage"/>
                 <column id="technicalCertificate"/>
+                <column id="photo"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"

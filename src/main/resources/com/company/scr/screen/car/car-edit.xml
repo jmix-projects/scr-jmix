@@ -23,7 +23,17 @@
     </data>
     <facets>
         <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
     </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
     <dialogMode height="600"
                 width="800"/>
     <layout spacing="true" expand="editActions">
@@ -53,6 +63,7 @@
                             <action id="clear" type="entity_clear"/>
                         </actions>
                     </entityPicker>
+                    <fileStorageUpload id="photoField" property="photo"/>
                 </column>
             </form>
         </scrollBox>

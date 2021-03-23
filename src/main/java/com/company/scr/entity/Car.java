@@ -3,11 +3,13 @@ package com.company.scr.entity;
 import com.company.scr.entity.constraints.PurchasedAfterManufactured;
 import com.company.scr.entity.constraints.ReliabilityPolicyCompliant;
 import io.jmix.core.DeletePolicy;
+import io.jmix.core.FileRef;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.OnDelete;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
+import io.jmix.core.metamodel.annotation.PropertyDatatype;
 import io.jmix.core.validation.group.RestApiChecks;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -107,6 +109,18 @@ public class Car {
     @Column(name = "LAST_MODIFIED_DATE")
     @Temporal(TemporalType.DATE)
     private Date lastModifiedDate;
+
+    @PropertyDatatype("fileRef")
+    @Column(name = "PHOTO")
+    private FileRef photo;
+
+    public FileRef getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(FileRef photo) {
+        this.photo = photo;
+    }
 
     public UUID getId() {
         return id;

@@ -32,6 +32,7 @@ dependencies {
     implementation 'io.jmix.security:jmix-security-starter'
     implementation 'io.jmix.security:jmix-security-ui-starter'
     implementation 'io.jmix.security:jmix-security-data-starter'
+    implementation 'io.jmix.localfs:jmix-localfs-starter'
     implementation 'io.jmix.rest:jmix-rest-starter'
     implementation 'io.jmix.security:jmix-security-oauth2-starter'
     implementation 'io.jmix.graphql:jmix-graphql-starter'
