@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./app/App";
+import ComponentPreviews from "./component-previews";
+import { DevSupport } from "@haulmont/react-ide-toolbox";
 // import registerServiceWorker from './registerServiceWorker';
 import { JmixAppProvider } from "@haulmont/jmix-react-core";
 import { I18nProvider } from "@haulmont/jmix-react-ui";
@@ -15,7 +17,7 @@ import "./index.css";
 import { antdLocaleMapping, messagesMapping } from "./i18n/i18nMappings";
 
 export const jmixREST = initializeApp({
-  name: "",
+  name: "scr-jmix",
   apiUrl: JMIX_REST_URL,
   restClientId: REST_CLIENT_ID,
   restClientSecret: REST_CLIENT_SECRET,
@@ -30,7 +32,9 @@ ReactDOM.render(
       antdLocaleMapping={antdLocaleMapping}
     >
       <HashRouter>
-        <Route component={App} />
+        <DevSupport ComponentPreviews={<Route component={ComponentPreviews} />}>
+          <Route component={App} />
+        </DevSupport>
       </HashRouter>
     </I18nProvider>
   </JmixAppProvider>,
