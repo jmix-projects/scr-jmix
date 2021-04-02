@@ -1,0 +1,6 @@
+{
+  "name": "scr-jmix-generation",
+  "devDependencies": {
+    "@haulmont/jmix-front-generator": "^0.9.0-beta.1"
+  }
+}
