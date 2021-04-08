@@ -1,4 +1,3 @@
-import { UserManagement } from "./app/UserManagement";
 import { TrickyIdMgr } from "./app/tricky-id/TrickyIdMgr";
 import { BoringStringIdManagementTable } from "./app/boring-string-id-management-table/BoringStringIdManagementTable";
 import { WeirdStringIdMgtTableManagement } from "./app/weird-string-id-management-table/WeirdStringIdMgtTableManagement";
