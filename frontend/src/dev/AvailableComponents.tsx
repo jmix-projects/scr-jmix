@@ -10,7 +10,7 @@ export default () =>
 
     <Category name='Layout'>
 
-      <Component name='Divider2222'>
+      <Component name='Divider'>
         <Variant>
           <Divider/>
         </Variant>
