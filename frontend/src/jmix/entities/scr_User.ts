@@ -9,8 +9,9 @@ export class User {
   email?: string | null;
   enabled?: boolean | null;
   phone?: string | null;
+  authorities?: any | null;
 }
-export type UserViewName = "_base" | "_instance_name" | "_local";
+export type UserViewName = "_base" | "_instance_name" | "_local" | "user-front";
 export type UserView<V extends UserViewName> = V extends "_base"
   ? Pick<
       User,
@@ -35,6 +36,17 @@ export type UserView<V extends UserViewName> = V extends "_base"
       | "password"
       | "firstName"
       | "lastName"
+      | "email"
+      | "enabled"
+      | "phone"
+    >
+  : V extends "user-front"
+  ? Pick<
+      User,
+      | "id"
+      | "firstName"
+      | "lastName"
+      | "username"
       | "email"
       | "enabled"
       | "phone"

@@ -136,5 +136,10 @@
         <property name="stringIdTestEntityAttr" fetchPlan="_instance_name"/>
         <property name="weirdStringIdTestEntityAttr" fetchPlan="_instance_name"/>
     </fetchPlan>
+    <fetchPlan entity="scr_User" name="user-front" extends="_instance_name">
+        <property name="email"/>
+        <property name="enabled"/>
+        <property name="phone"/>
+    </fetchPlan>
 
 </fetchPlans>
