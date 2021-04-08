@@ -1,6 +1,9 @@
 import {Category, Component, Variant, Palette} from "../dev/Palette";
 import {AutoComplete, Avatar, Button, Card, Checkbox, Col, DatePicker, Divider, Input, Row, Space} from "antd";
 import {ArrowUpOutlined} from "@ant-design/icons";
+import {Field} from "@haulmont/jmix-react-ui";
+import {Car} from "../jmix/entities/scr$Car";
+import * as React from "react";
 
 export default () =>
   <Palette>
@@ -107,6 +110,22 @@ export default () =>
               <Avatar/>
             </Card>
           </Card>
+        </Variant>
+      </Component>
+    </Category>
+
+
+    <Category name='Data Entry'>
+      <Component name='From Field'>
+        <Variant>
+          <Field
+            entityName={Car.NAME}
+            propertyName="manufacturer"
+            formItemProps={{
+              style: { marginBottom: "12px" },
+              rules: [{ required: true }]
+            }}
+          />
         </Variant>
       </Component>
     </Category>
