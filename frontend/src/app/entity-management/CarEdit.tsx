@@ -190,14 +190,7 @@ class CarEditComponent extends React.Component<Props & WrappedComponentProps> {
           ref={this.formRef}
           validateMessages={createAntdFormValidationMessages(intl)}
         >
-          <Field
-            entityName={Car.NAME}
-            propertyName="manufacturer"
-            formItemProps={{
-              style: { marginBottom: "12px" },
-              rules: [{ required: true }]
-            }}
-          />
+
 
           <Field
             entityName={Car.NAME}
