@@ -1,3 +1,4 @@
+import { UserManagement } from "./app/UserManagement";
 import { TrickyIdMgr } from "./app/tricky-id/TrickyIdMgr";
 import { BoringStringIdManagementTable } from "./app/boring-string-id-management-table/BoringStringIdManagementTable";
 import { WeirdStringIdMgtTableManagement } from "./app/weird-string-id-management-table/WeirdStringIdMgtTableManagement";
@@ -90,205 +91,212 @@ menuItems.push({
   caption: "CarManagement3"
 });
 
-menuItems.push({
-  pathPattern: "/datatypesManagement1/:entityId?",
-  menuLink: "/datatypesManagement1",
-  component: DatatypesManagement1,
-  caption: "DatatypesManagement1"
-});
-
-menuItems.push({
-  pathPattern: "/datatypesManagement2/:entityId?",
-  menuLink: "/datatypesManagement2",
-  component: DatatypesManagement2,
-  caption: "DatatypesManagement2"
-});
-
-menuItems.push({
-  pathPattern: "/datatypesManagement3/:entityId?",
-  menuLink: "/datatypesManagement3",
-  component: DatatypesManagement3,
-  caption: "DatatypesManagement3"
-});
-
-menuItems.push({
-  pathPattern: "/hooksPOCManagement/:entityId?",
-  menuLink: "/hooksPOCManagement",
-  component: HooksPOCManagement,
-  caption: "HooksPOCManagement"
-});
-
-menuItems.push({
-  pathPattern: "/associationO2OManagement/:entityId?",
-  menuLink: "/associationO2OManagement",
-  component: AssociationO2OManagement,
-  caption: "AssociationO2OManagement"
-});
-
-menuItems.push({
-  pathPattern: "/associationO2MManagement/:entityId?",
-  menuLink: "/associationO2MManagement",
-  component: AssociationO2MManagement,
-  caption: "AssociationO2MManagement"
-});
-
-menuItems.push({
-  pathPattern: "/associationM2OManagement/:entityId?",
-  menuLink: "/associationM2OManagement",
-  component: AssociationM2OManagement,
-  caption: "AssociationM2OManagement"
-});
-
-menuItems.push({
-  pathPattern: "/associationM2MManagement/:entityId?",
-  menuLink: "/associationM2MManagement",
-  component: AssociationM2MManagement,
-  caption: "AssociationM2MManagement"
-});
-
-menuItems.push({
-  pathPattern: "/compositionO2OManagement/:entityId?",
-  menuLink: "/compositionO2OManagement",
-  component: CompositionO2OManagement,
-  caption: "CompositionO2OManagement"
-});
-
-menuItems.push({
-  pathPattern: "/compositionO2MManagement/:entityId?",
-  menuLink: "/compositionO2MManagement",
-  component: CompositionO2MManagement,
-  caption: "CompositionO2MManagement"
-});
-
-menuItems.push({
-  pathPattern: "/datatypes2Management/:entityId?",
-  menuLink: "/datatypes2Management",
-  component: Datatypes2Management,
-  caption: "Datatypes2Management"
-});
-
-menuItems.push({
-  pathPattern: "/datatypes3Management/:entityId?",
-  menuLink: "/datatypes3Management",
-  component: Datatypes3Management,
-  caption: "Datatypes3Management"
-});
-
-menuItems.push({
-  pathPattern: "/datatypesCards/:entityId?",
-  menuLink: "/datatypesCards",
-  component: DatatypesCards,
-  caption: "DatatypesCards"
-});
-
-menuItems.push({
-  pathPattern: "/intIdentityIdCards/:entityId?",
-  menuLink: "/intIdentityIdCards",
-  component: IntIdentityIdCards,
-  caption: "IntIdentityIdCards"
-});
-
-menuItems.push({
-  pathPattern: "/intIdManagementTable/:entityId?",
-  menuLink: "/intIdManagementTable",
-  component: IntIdManagementTable,
-  caption: "IntIdManagementTable"
-});
-
-menuItems.push({
-  pathPattern: "/intIdManagementCards/:entityId?",
-  menuLink: "/intIdManagementCards",
-  component: IntIdManagementCards,
-  caption: "IntIdManagementCards"
-});
-
-menuItems.push({
-  pathPattern: "/intIdManagementList/:entityId?",
-  menuLink: "/intIdManagementList",
-  component: IntIdManagementList,
-  caption: "IntIdManagementList"
-});
-
-menuItems.push({
-  pathPattern: "/intIdentityIdMgtTableManagement/:entityId?",
-  menuLink: "/intIdentityIdMgtTableManagement",
-  component: IntIdentityIdMgtTableManagement,
-  caption: "IntIdentityIdMgtTableManagement"
-});
-
-menuItems.push({
-  pathPattern: "/intIdentityIdMgtCardsManagement/:entityId?",
-  menuLink: "/intIdentityIdMgtCardsManagement",
-  component: IntIdentityIdMgtCardsManagement,
-  caption: "IntIdentityIdMgtCardsManagement"
-});
-
-menuItems.push({
-  pathPattern: "/intIdentityIdMgtListManagement/:entityId?",
-  menuLink: "/intIdentityIdMgtListManagement",
-  component: IntIdentityIdMgtListManagement,
-  caption: "IntIdentityIdMgtListManagement"
-});
-
-menuItems.push({
-  pathPattern: "/stringIdCards/:entityId?",
-  menuLink: "/stringIdCards",
-  component: StringIdCards,
-  caption: "StringIdCards"
-});
-
-menuItems.push({
-  pathPattern: "/stringIdMgtCardsManagement/:entityId?",
-  menuLink: "/stringIdMgtCardsManagement",
-  component: StringIdMgtCardsManagement,
-  caption: "StringIdMgtCardsManagement"
-});
-
-menuItems.push({
-  pathPattern: "/stringIdMgtListManagement/:entityId?",
-  menuLink: "/stringIdMgtListManagement",
-  component: StringIdMgtListManagement,
-  caption: "StringIdMgtListManagement"
-});
-
-menuItems.push({
-  pathPattern: "/stringIdMgtTableManagement/:entityId?",
-  menuLink: "/stringIdMgtTableManagement",
-  component: StringIdMgtTableManagement,
-  caption: "StringIdMgtTableManagement"
-});
-
-menuItems.push({
-  pathPattern: "/weirdStringIdMgtCardsManagement/:entityId?",
-  menuLink: "/weirdStringIdMgtCardsManagement",
-  component: WeirdStringIdMgtCardsManagement,
-  caption: "WeirdStringIdMgtCardsManagement"
-});
-
-menuItems.push({
-  pathPattern: "/weirdStringIdMgtListManagement/:entityId?",
-  menuLink: "/weirdStringIdMgtListManagement",
-  component: WeirdStringIdMgtListManagement,
-  caption: "WeirdStringIdMgtListManagement"
-});
-
-menuItems.push({
-  pathPattern: "/weirdStringIdMgtTableManagement/:entityId?",
-  menuLink: "/weirdStringIdMgtTableManagement",
-  component: WeirdStringIdMgtTableManagement,
-  caption: "WeirdStringIdMgtTableManagement"
-});
-
-menuItems.push({
-  pathPattern: "/boringStringIdManagementTable/:entityId?",
-  menuLink: "/boringStringIdManagementTable",
-  component: BoringStringIdManagementTable,
-  caption: "BoringStringIdManagementTable"
-});
-
-menuItems.push({
-  pathPattern: "/trickyIdMgr/:entityId?",
-  menuLink: "/trickyIdMgr",
-  component: TrickyIdMgr,
-  caption: "TrickyIdMgr"
-});
+// menuItems.push({
+//   pathPattern: "/datatypesManagement1/:entityId?",
+//   menuLink: "/datatypesManagement1",
+//   component: DatatypesManagement1,
+//   caption: "DatatypesManagement1"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/datatypesManagement2/:entityId?",
+//   menuLink: "/datatypesManagement2",
+//   component: DatatypesManagement2,
+//   caption: "DatatypesManagement2"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/datatypesManagement3/:entityId?",
+//   menuLink: "/datatypesManagement3",
+//   component: DatatypesManagement3,
+//   caption: "DatatypesManagement3"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/hooksPOCManagement/:entityId?",
+//   menuLink: "/hooksPOCManagement",
+//   component: HooksPOCManagement,
+//   caption: "HooksPOCManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/associationO2OManagement/:entityId?",
+//   menuLink: "/associationO2OManagement",
+//   component: AssociationO2OManagement,
+//   caption: "AssociationO2OManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/associationO2MManagement/:entityId?",
+//   menuLink: "/associationO2MManagement",
+//   component: AssociationO2MManagement,
+//   caption: "AssociationO2MManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/associationM2OManagement/:entityId?",
+//   menuLink: "/associationM2OManagement",
+//   component: AssociationM2OManagement,
+//   caption: "AssociationM2OManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/associationM2MManagement/:entityId?",
+//   menuLink: "/associationM2MManagement",
+//   component: AssociationM2MManagement,
+//   caption: "AssociationM2MManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/compositionO2OManagement/:entityId?",
+//   menuLink: "/compositionO2OManagement",
+//   component: CompositionO2OManagement,
+//   caption: "CompositionO2OManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/compositionO2MManagement/:entityId?",
+//   menuLink: "/compositionO2MManagement",
+//   component: CompositionO2MManagement,
+//   caption: "CompositionO2MManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/datatypes2Management/:entityId?",
+//   menuLink: "/datatypes2Management",
+//   component: Datatypes2Management,
+//   caption: "Datatypes2Management"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/datatypes3Management/:entityId?",
+//   menuLink: "/datatypes3Management",
+//   component: Datatypes3Management,
+//   caption: "Datatypes3Management"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/datatypesCards/:entityId?",
+//   menuLink: "/datatypesCards",
+//   component: DatatypesCards,
+//   caption: "DatatypesCards"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdentityIdCards/:entityId?",
+//   menuLink: "/intIdentityIdCards",
+//   component: IntIdentityIdCards,
+//   caption: "IntIdentityIdCards"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdManagementTable/:entityId?",
+//   menuLink: "/intIdManagementTable",
+//   component: IntIdManagementTable,
+//   caption: "IntIdManagementTable"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdManagementCards/:entityId?",
+//   menuLink: "/intIdManagementCards",
+//   component: IntIdManagementCards,
+//   caption: "IntIdManagementCards"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdManagementList/:entityId?",
+//   menuLink: "/intIdManagementList",
+//   component: IntIdManagementList,
+//   caption: "IntIdManagementList"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdentityIdMgtTableManagement/:entityId?",
+//   menuLink: "/intIdentityIdMgtTableManagement",
+//   component: IntIdentityIdMgtTableManagement,
+//   caption: "IntIdentityIdMgtTableManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdentityIdMgtCardsManagement/:entityId?",
+//   menuLink: "/intIdentityIdMgtCardsManagement",
+//   component: IntIdentityIdMgtCardsManagement,
+//   caption: "IntIdentityIdMgtCardsManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/intIdentityIdMgtListManagement/:entityId?",
+//   menuLink: "/intIdentityIdMgtListManagement",
+//   component: IntIdentityIdMgtListManagement,
+//   caption: "IntIdentityIdMgtListManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/stringIdCards/:entityId?",
+//   menuLink: "/stringIdCards",
+//   component: StringIdCards,
+//   caption: "StringIdCards"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/stringIdMgtCardsManagement/:entityId?",
+//   menuLink: "/stringIdMgtCardsManagement",
+//   component: StringIdMgtCardsManagement,
+//   caption: "StringIdMgtCardsManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/stringIdMgtListManagement/:entityId?",
+//   menuLink: "/stringIdMgtListManagement",
+//   component: StringIdMgtListManagement,
+//   caption: "StringIdMgtListManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/stringIdMgtTableManagement/:entityId?",
+//   menuLink: "/stringIdMgtTableManagement",
+//   component: StringIdMgtTableManagement,
+//   caption: "StringIdMgtTableManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/weirdStringIdMgtCardsManagement/:entityId?",
+//   menuLink: "/weirdStringIdMgtCardsManagement",
+//   component: WeirdStringIdMgtCardsManagement,
+//   caption: "WeirdStringIdMgtCardsManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/weirdStringIdMgtListManagement/:entityId?",
+//   menuLink: "/weirdStringIdMgtListManagement",
+//   component: WeirdStringIdMgtListManagement,
+//   caption: "WeirdStringIdMgtListManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/weirdStringIdMgtTableManagement/:entityId?",
+//   menuLink: "/weirdStringIdMgtTableManagement",
+//   component: WeirdStringIdMgtTableManagement,
+//   caption: "WeirdStringIdMgtTableManagement"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/boringStringIdManagementTable/:entityId?",
+//   menuLink: "/boringStringIdManagementTable",
+//   component: BoringStringIdManagementTable,
+//   caption: "BoringStringIdManagementTable"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/trickyIdMgr/:entityId?",
+//   menuLink: "/trickyIdMgr",
+//   component: TrickyIdMgr,
+//   caption: "TrickyIdMgr"
+// });
+//
+// menuItems.push({
+//   pathPattern: "/userManagement/:entityId?",
+//   menuLink: "/userManagement",
+//   component: UserManagement,
+//   caption: "UserManagement"
+// });
