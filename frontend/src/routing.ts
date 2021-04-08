@@ -55,12 +55,12 @@ const userSettingsSubMenu = {
 menuItems.push(userSettingsSubMenu);
 */
 
-menuItems.push({
-  pathPattern: "/testBlankComponent/:entityId?",
-  menuLink: "/testBlankComponent",
-  component: TestBlankComponent,
-  caption: "TestBlankComponent"
-});
+// menuItems.push({
+//   pathPattern: "/testBlankComponent/:entityId?",
+//   menuLink: "/testBlankComponent",
+//   component: TestBlankComponent,
+//   caption: "TestBlankComponent"
+// });
 
 menuItems.push({
   pathPattern: "/favoriteCars/:entityId?",
