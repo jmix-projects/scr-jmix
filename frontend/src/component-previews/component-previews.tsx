@@ -35,6 +35,9 @@ import {TestBlankComponent} from "../app/blank-components/TestBlankComponent";
 import React from "react";
 import {Previews} from "./previews";
 import {ComponentPreview} from "./component-preview";
+import CarEdit from "../app/entity-management/CarEdit";
+import CarCards from "../app/entity-management/CarCards";
+import {ResultComponent} from "../app/example/Result";
 
 export const ComponentPreviews: React.FC = () => {
   return (
@@ -48,132 +51,16 @@ export const ComponentPreviews: React.FC = () => {
         <FavoriteCars/>
       </ComponentPreview>
 
-      <ComponentPreview path="/carManagement">
-        <CarManagement/>
+      <ComponentPreview path="/carEdit">
+        <CarEdit entityId={"new"}/>
       </ComponentPreview>
 
-      <ComponentPreview path="/carManagement2">
-        <CarManagement2/>
+      <ComponentPreview path="/carCards">
+        <CarCards onPagingChange={() => {}} paginationConfig={{}}/>
       </ComponentPreview>
 
-      <ComponentPreview path="/carManagement3">
-        <CarManagement3/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypesManagement1">
-        <DatatypesManagement1/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypesManagement2">
-        <DatatypesManagement2/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypesManagement3">
-        <DatatypesManagement3/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/hooksPOCManagement">
-        <HooksPOCManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/associationO2OManagement">
-        <AssociationO2OManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/associationO2MManagement">
-        <AssociationO2MManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/associationM2OManagement">
-        <AssociationM2OManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/associationM2MManagement">
-        <AssociationM2MManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/compositionO2OManagement">
-        <CompositionO2OManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/compositionO2MManagement">
-        <CompositionO2MManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypes2Management">
-        <Datatypes2Management/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypes3Management">
-        <Datatypes3Management/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/datatypesCards">
-        <DatatypesCards/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdentityIdCards">
-        <IntIdentityIdCards/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdManagementTable">
-        <IntIdManagementTable/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdManagementCards">
-        <IntIdManagementCards/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdManagementList">
-        <IntIdManagementList/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdentityIdMgtTableManagement">
-        <IntIdentityIdMgtTableManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdentityIdMgtCardsManagement">
-        <IntIdentityIdMgtCardsManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/intIdentityIdMgtListManagement">
-        <IntIdentityIdMgtListManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/stringIdCards">
-        <StringIdCards/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/stringIdMgtCardsManagement">
-        <StringIdMgtCardsManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/stringIdMgtListManagement">
-        <StringIdMgtListManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/stringIdMgtTableManagement">
-        <StringIdMgtTableManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/weirdStringIdMgtCardsManagement">
-        <WeirdStringIdMgtCardsManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/weirdStringIdMgtListManagement">
-        <WeirdStringIdMgtListManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/weirdStringIdMgtTableManagement">
-        <WeirdStringIdMgtTableManagement/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/boringStringIdManagementTable">
-        <BoringStringIdManagementTable/>
-      </ComponentPreview>
-
-      <ComponentPreview path="/trickyIdMgr">
-        <TrickyIdMgr/>
+      <ComponentPreview path="/result">
+        <ResultComponent/>
       </ComponentPreview>
     </Previews>
   );

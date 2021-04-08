@@ -72,6 +72,7 @@ export class FavoriteCarsComponent extends React.Component<Props> {
 
     return (
       <div className="narrow-layout">
+        <h1>Ttest</h1>
         {items.map(e => (
           <Card
             title={e._instanceName}

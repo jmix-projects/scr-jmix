@@ -445,4 +445,6 @@ class CarEditComponent extends React.Component<Props & WrappedComponentProps> {
   }
 }
 
-export default injectIntl(injectMainStore(observer(CarEditComponent)));
+const CarEdit = injectIntl(injectMainStore(observer(CarEditComponent)));
+
+export default CarEdit
