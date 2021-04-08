@@ -76,8 +76,6 @@ type Mutation {
     upsert_ui_FilterConfiguration(filterConfiguration: inp_ui_FilterConfiguration!): ui_FilterConfiguration
     upsert_ui_Setting(uiSetting: inp_ui_Setting!): ui_Setting
     upsert_ui_TablePresentation(uiTablePresentation: inp_ui_TablePresentation!): ui_TablePresentation
-
-
 }
 
 type Query {
