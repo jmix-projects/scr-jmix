@@ -1,0 +1,9 @@
+mutation {
+    createProduct (manufacturer: "audi", model: "M3", price: 10) {
+        id
+        car {
+            manufacturer
+            model
+        }
+    }
+}

@@ -3,6 +3,7 @@
 schema {
     query: Query
     mutation: Mutation
+    subscription: Subscription
 }
 
 type Car {
@@ -27,6 +28,20 @@ type Car {
     technicalCertificate: TechnicalCertificate
     version: Int
     wheelOnRight: Boolean
+}
+
+type CarDto {
+    garage: Garage
+    id: UUID
+    manufacturer: String
+    model: String
+    price: BigDecimal
+}
+
+type Customer {
+    email: String
+    id: UUID
+    name: String
 }
 
 type FileRef {
@@ -55,12 +70,42 @@ type GrantedAuthority {
 
 "Mutation root"
 type Mutation {
-    createCar(carDto: CarDtoInput): Car
+    createProduct(manufacturer: String!, model: String, price: BigDecimal): Product
+}
+
+type Order {
+    amount: BigDecimal
+    customer: Customer
+    date: LocalDateTime
+    id: UUID
+    lastModifiedBy: String
+    lastModifiedDate: Date
+    lines: [OrderLine]
+}
+
+type OrderLine {
+    id: UUID
+    order: Order
+    product: Product!
+    quantity: Int
+}
+
+type Product {
+    car: Car!
+    id: UUID
+    price: BigDecimal
+    special: Boolean
 }
 
 "Query root"
 type Query {
-    cars: [Car]
+    cars: [CarDto]
+    orders(order: String = "lastModifiedDate"): [Order]
+}
+
+"Subscription root"
+type Subscription {
+    newCarAdded(manufacturer: String): Car
 }
 
 type TechnicalCertificate {
@@ -97,17 +142,15 @@ enum EcoRank {
     EURO3
 }
 
-input CarDtoInput {
-    manufacturer: String
-    model: String
-}
-
 
 "Built-in java.math.BigDecimal"
 scalar BigDecimal
 
 "Built-in scalar representing an instant in time"
 scalar Date
+
+"Built-in scalar representing a local date-time"
+scalar LocalDateTime
 
 "Built-in scalar representing a local time"
 scalar LocalTime

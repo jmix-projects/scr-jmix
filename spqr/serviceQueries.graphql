@@ -1,4 +1,4 @@
-query {
+query Cars {
     cars {
         id
         garage {
@@ -7,3 +7,8 @@ query {
     }
 }
 
+query Orders {
+    orders {
+        id
+    }
+}

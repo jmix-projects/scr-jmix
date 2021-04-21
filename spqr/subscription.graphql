@@ -1,0 +1,7 @@
+subscription {
+    newCarAdded (manufacturer: "audi") {
+        id
+        manufacturer
+        model
+    }
+}

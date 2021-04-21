@@ -25,6 +25,16 @@ public class CarDto {
     @JmixProperty
     private String model;
 
+    public CarDto() {
+    }
+
+    public CarDto(Car car) {
+        this.id = car.getId();
+        this.manufacturer = car.manufacturer;
+        this.model = car.model;
+        this.price = car.price;
+    }
+
     public String getModel() {
         return model;
     }
