@@ -36,6 +36,7 @@ dependencies {
     implementation 'io.jmix.rest:jmix-rest-starter'
     implementation 'io.jmix.security:jmix-security-oauth2-starter'
     implementation 'io.jmix.graphql:jmix-graphql-starter'
+    implementation 'io.leangen.graphql:graphql-spqr-spring-boot-starter:0.0.6'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 

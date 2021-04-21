@@ -1,0 +1,122 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Car {
+    carType: CarType
+    createdBy: String
+    createdDate: Date
+    displayName: String
+    ecoRank: EcoRank
+    garage: Garage
+    id: UUID
+    lastModifiedBy: String
+    lastModifiedDate: Date
+    manufactureDate: Date
+    manufacturer: String!
+    maxPassengers: Int
+    mileage: Float
+    model: String
+    photo: FileRef
+    price: BigDecimal
+    purchaseDate: Date
+    regNumber: String
+    technicalCertificate: TechnicalCertificate
+    version: Int
+    wheelOnRight: Boolean
+}
+
+type FileRef {
+    fileName: String
+    parameters: Map_String_StringScalar
+    path: String
+    storageName: String
+}
+
+type Garage {
+    address: String
+    capacity: Int
+    cars: [Car]
+    currentCars: [Car]
+    id: UUID
+    name: String
+    personnel: [User]
+    vanEntry: Boolean
+    workingHoursFrom: LocalTime
+    workingHoursTo: LocalTime
+}
+
+type GrantedAuthority {
+    authority: String
+}
+
+"Mutation root"
+type Mutation {
+    createCar(carDto: CarDtoInput): Car
+}
+
+"Query root"
+type Query {
+    cars: [Car]
+}
+
+type TechnicalCertificate {
+    car: Car
+    certNumber: String
+    id: UUID
+}
+
+type User {
+    accountNonExpired: Boolean!
+    accountNonLocked: Boolean!
+    authorities: [GrantedAuthority]
+    credentialsNonExpired: Boolean!
+    displayName: String
+    email: String
+    enabled: Boolean
+    firstName: String
+    id: UUID
+    lastName: String
+    password: String
+    phone: String
+    username: String
+    version: Int
+}
+
+enum CarType {
+    HATCHBACK
+    SEDAN
+}
+
+enum EcoRank {
+    EURO1
+    EURO2
+    EURO3
+}
+
+input CarDtoInput {
+    manufacturer: String
+    model: String
+}
+
+
+"Built-in java.math.BigDecimal"
+scalar BigDecimal
+
+"Built-in scalar representing an instant in time"
+scalar Date
+
+"Built-in scalar representing a local time"
+scalar LocalTime
+
+"Built-in scalar for map-like structures"
+scalar Map_String_StringScalar
+
+"Use SPQR's SchemaPrinter to remove this from SDL"
+scalar UNREPRESENTABLE
+
+"UUID String"
+scalar UUID

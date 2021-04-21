@@ -851,6 +851,7 @@ type sec_ResourceRoleEntity {
     id: UUID
     name: String
     resourcePolicies: [sec_ResourcePolicyEntity]
+    scopes: String
     sysTenantId: String
     updateTs: Date
     updatedBy: String
@@ -2138,6 +2139,7 @@ input inp_sec_ResourceRoleEntity {
     id: UUID
     name: String
     resourcePolicies: [inp_sec_ResourcePolicyEntity]
+    scopes: String
     sysTenantId: String
     updateTs: Date
     updatedBy: String
@@ -2158,6 +2160,7 @@ input inp_sec_ResourceRoleEntityFilterCondition {
     description: [inp_stringFilterCondition]
     id: [inp_uUIDFilterCondition]
     name: [inp_stringFilterCondition]
+    scopes: [inp_stringFilterCondition]
     sysTenantId: [inp_stringFilterCondition]
     updateTs: [inp_dateFilterCondition]
     updatedBy: [inp_stringFilterCondition]
@@ -2174,6 +2177,7 @@ input inp_sec_ResourceRoleEntityOrderBy {
     description: SortOrder
     id: SortOrder
     name: SortOrder
+    scopes: SortOrder
     sysTenantId: SortOrder
     updateTs: SortOrder
     updatedBy: SortOrder
@@ -2508,9 +2512,6 @@ input inp_ui_TablePresentationOrderBy {
     updatedBy: SortOrder
     username: SortOrder
 }
-
-"expression to compare columns of type Void. All fields are combined with logical 'AND'"
-input inp_voidFilterCondition
 
 
 scalar BigDecimal

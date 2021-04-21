@@ -6,6 +6,7 @@ import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 import io.jmix.security.authentication.AcceptsGrantedAuthorities;
+import io.leangen.graphql.annotations.GraphQLIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -156,6 +157,7 @@ public class User implements UserDetails, AcceptsGrantedAuthorities {
     }
 
     @Override
+    @GraphQLIgnore
     public boolean isEnabled() {
         return enabled;
     }

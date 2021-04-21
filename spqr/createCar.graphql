@@ -1,0 +1,10 @@
+mutation {
+    createCar (carDto: { manufacturer: "Mercedes",model: "M3"} ) {
+        manufacturer
+        model
+        id
+        createdDate
+        createdBy
+        version
+    }
+}
