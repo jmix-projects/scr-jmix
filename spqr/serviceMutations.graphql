@@ -1,5 +1,5 @@
 mutation {
-    createProduct (manufacturer: "audi", model: "M3", price: 10) {
+    createProduct (manufacturer: "audi", model: "sdfsdf", price: 10) {
         id
         car {
             manufacturer

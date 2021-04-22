@@ -101,6 +101,7 @@ type Product {
 type Query {
     cars: [CarDto]
     orders(order: String = "lastModifiedDate"): [Order]
+    orders2: [scr_Order_1]
 }
 
 "Subscription root"
@@ -129,6 +130,10 @@ type User {
     phone: String
     username: String
     version: Int
+}
+
+type scr_Order_1 {
+    id: UUID
 }
 
 enum CarType {

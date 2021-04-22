@@ -1,6 +1,5 @@
 query Cars {
     cars {
-        id
         garage {
             address
         }
@@ -9,6 +8,10 @@ query Cars {
 
 query Orders {
     orders {
+        id
+        amount
+    }
+    orders2 {
         id
     }
 }

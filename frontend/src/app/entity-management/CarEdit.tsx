@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Form, Alert, Button, Card, message } from "antd";
+import {Form, Alert, Button, Card, message, Checkbox} from "antd";
 import { FormInstance } from "antd/es/form";
 import { observer } from "mobx-react";
 import { CarManagementPaths } from "./CarManagement";
@@ -190,8 +190,6 @@ class CarEditComponent extends React.Component<Props & WrappedComponentProps> {
           ref={this.formRef}
           validateMessages={createAntdFormValidationMessages(intl)}
         >
-
-
           <Field
             entityName={Car.NAME}
             propertyName="model"
@@ -199,6 +197,7 @@ class CarEditComponent extends React.Component<Props & WrappedComponentProps> {
               style: { marginBottom: "12px" }
             }}
           />
+
 
           <Field
             entityName={Car.NAME}

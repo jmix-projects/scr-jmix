@@ -24,6 +24,7 @@ import reactor.core.publisher.FluxSink;
 import javax.annotation.Nonnull;
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,6 +50,11 @@ public class OrderService {
                 .query("select e from scr_Order e")
                 .sort(Sort.by(order))
                 .list();
+    }
+
+    @GraphQLQuery
+    public List<com.company.scr.graphql.dto.Order> orders2() {
+        return Collections.singletonList(new com.company.scr.graphql.dto.Order());
     }
 
     @GraphQLMutation
