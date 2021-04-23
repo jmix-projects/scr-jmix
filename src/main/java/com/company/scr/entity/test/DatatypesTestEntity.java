@@ -50,7 +50,8 @@ public class DatatypesTestEntity {
     protected String stringAttr;
 
     @Column(name = "TIME_ATTR")
-    private Time timeAttr;
+    @Temporal(TemporalType.TIME)
+    private Date timeAttr;
 
     public UUID getId() {
         return id;
@@ -141,11 +142,11 @@ public class DatatypesTestEntity {
     @Column(name = "READ_ONLY_STRING_ATTR")
     protected String readOnlyStringAttr;
 
-    public Time getTimeAttr() {
+    public Date getTimeAttr() {
         return timeAttr;
     }
 
-    public void setTimeAttr(Time timeAttr) {
+    public void setTimeAttr(Date timeAttr) {
         this.timeAttr = timeAttr;
     }
 
