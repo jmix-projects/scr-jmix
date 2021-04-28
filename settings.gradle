@@ -1,1 +1,3 @@
 rootProject.name = 'scr-jmix'
+
+include 'frontend'
