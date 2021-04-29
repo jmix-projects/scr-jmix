@@ -19,9 +19,10 @@ VALUES
 -- manager permissions
 INSERT INTO public.sec_resource_policy (id, create_ts, created_by, type_, policy_group, resource_, action_, effect, role_id)
 VALUES
-('1fe89195-6624-99a8-19eb-46868d280706', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,    'rest.enabled', 'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
-('7f1cd8e8-7af2-43c8-9a76-0fc8c2e01947', '2021-02-19 16:24:59.947', 'admin', 'screen',    NULL,    '*',            'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
-('07583742-266a-4084-ab8d-d221d7891902', '2021-02-19 16:24:59.947', 'admin', 'menu',      NULL,    '*',            'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
+('1fe89195-6624-99a8-19eb-46868d280706', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,    'rest.enabled',    'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
+('1fe89195-6614-99a8-19eb-46868d280706', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,    'graphql.enabled', 'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
+('7f1cd8e8-7af2-43c8-9a76-0fc8c2e01947', '2021-02-19 16:24:59.947', 'admin', 'screen',    NULL,    '*',               'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
+('07583742-266a-4084-ab8d-d221d7891902', '2021-02-19 16:24:59.947', 'admin', 'menu',      NULL,    '*',               'access', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
 
 ('92511121-22bd-b09b-3a87-51c9d70212b4', '2021-02-19 16:24:59.947', 'admin', 'entity', 'scr$Car', 'scr$Car',      'create', 'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
 ('ca8200b7-bb43-e9bb-e93b-5f2707b6a8f6', '2021-02-19 16:24:59.947', 'admin', 'entity', 'scr$Car', 'scr$Car',      'read',   'allow', '91099ca3-194e-6ba5-7aa6-15b03bcef05a'),
@@ -35,9 +36,10 @@ VALUES
 -- mechanic permissions
 INSERT INTO public.sec_resource_policy (id, create_ts, created_by, type_, policy_group, resource_, action_, effect, role_id)
 VALUES
-('35010e42-f9c1-dde3-655d-98c2956225a8', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,       'rest.enabled', 'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
-('bb818629-a6d6-4aaa-ad65-b431e054fd9e', '2021-02-19 16:24:59.947', 'admin', 'screen',    NULL,       '*',            'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
-('173308a1-1ff4-4edb-a559-872c8b239283', '2021-02-19 16:24:59.947', 'admin', 'menu',      NULL,       '*',            'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
+('35010e42-f9c1-dde3-655d-98c2956225a8', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,       'rest.enabled',    'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
+('35010e42-f9c1-dde1-655d-98c2956225a8', '2021-02-19 16:24:59.947', 'admin', 'specific',  NULL,       'graphql.enabled', 'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
+('bb818629-a6d6-4aaa-ad65-b431e054fd9e', '2021-02-19 16:24:59.947', 'admin', 'screen',    NULL,       '*',               'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
+('173308a1-1ff4-4edb-a559-872c8b239283', '2021-02-19 16:24:59.947', 'admin', 'menu',      NULL,       '*',               'access', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
 
 ('b12f7355-3358-02ac-f54d-e9b27291c2b2', '2021-02-19 16:24:59.947', 'admin', 'entity',    'scr$Car',  'scr$Car',      'create', 'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
 ('4a34b7db-381d-b55d-126b-9bac1c644d1e', '2021-02-19 16:24:59.947', 'admin', 'entity',    'scr$Car',  'scr$Car',      'read',   'allow', '23548523-3f0f-f96a-07ff-0d60b9cb5c1b'),
