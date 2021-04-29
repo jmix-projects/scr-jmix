@@ -14,7 +14,7 @@ export const createApolloClient = (config: ApolloClientConfig = {}) => {
   });
 
   const authLink = setContext((_, { headers }) => {
-    const token = storage.getItem("_jmixRestAccessToken");
+    const token = storage.getItem("scr-jmix_jmixRestAccessToken");
     return {
       headers: {
         ...headers,

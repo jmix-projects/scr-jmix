@@ -19,7 +19,7 @@ import { ApolloProvider } from "@apollo/client";
 import { createApolloClient } from "./graphql/graphql";
 
 export const jmixREST = initializeApp({
-  name: "",
+  name: "scr-jmix",
   apiUrl: JMIX_REST_URL,
   restClientId: REST_CLIENT_ID,
   restClientSecret: REST_CLIENT_SECRET,
@@ -33,7 +33,7 @@ ReactDOM.render(
   <JmixAppProvider
     jmixREST={jmixREST}
     config={{
-      appName: "",
+      appName: "scr-jmix",
       clientId: REST_CLIENT_ID, // TODO Rename once we remove REST
       secret: REST_CLIENT_SECRET,
       locale: "en"
