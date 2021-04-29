@@ -17,9 +17,6 @@
       </entry>
     </moduleSettings>
   </component>
-  <component name="JmixGraphQLProjectSettings">
-    <option name="enable" value="true" />
-  </component>
   <component name="JmixPluginProjectSettings">
     <option name="savedDbProperties">
       <list>
