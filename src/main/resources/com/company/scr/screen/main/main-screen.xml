@@ -3,41 +3,41 @@
 
     <layout>
         <cssLayout id="horizontalWrap"
-                   stylename="jmix-sidemenu-layout"
-                   height="100%"
-                   width="100%">
-            <cssLayout id="sideMenuContainer"
-                       height="100%"
-                       stylename="jmix-sidemenu-container">
-                <cssLayout id="sideMenuPanel"
-                           stylename="jmix-sidemenu-panel">
-                    <cssLayout id="appTitleBox"
-                               stylename="jmix-sidemenu-title"
-                               width="100%">
-                        <image id="logoImage"
-                               stylename="jmix-app-icon"
-                               scaleMode="SCALE_DOWN">
+                   stylename="jmix-drawer-layout">
+            <drawer id="drawer" expandOnHover="true">
+                <cssLayout id="appTitleBox"
+                           stylename="jmix-drawer-header"
+                           width="100%">
+                    <image id="logoImage"
+                           stylename="app-icon"
+                           scaleMode="SCALE_DOWN">
+                        <resource>
                             <theme path="branding/app-icon-menu.svg"/>
-                        </image>
-                        <label id="appTitleLabel"
-                               stylename="jmix-app-title"
-                               value="msg://application.logoLabel"/>
-                    </cssLayout>
-                    <sideMenu id="sideMenu"
-                              width="100%"/>
-                    <timeZoneIndicator id="timeZoneIndicator"
-                                       align="MIDDLE_CENTER"/>
-                    <cssLayout id="controlBox"
-                               stylename="jmix-sidemenu-controls"
-                               width="100%">
-                        <userIndicator id="userIndicator"
-                                       align="MIDDLE_CENTER"/>
-                        <logoutButton id="logoutButton"
-                                      icon="SIGN_OUT"
-                                      description="msg://logoutBtnDescription"/>
-                    </cssLayout>
+                        </resource>
+                    </image>
+                    <label id="appTitleLabel"
+                           stylename="app-title"
+                           value="msg://application.logoLabel"/>
                 </cssLayout>
-            </cssLayout>
+                <sideMenu id="sideMenu"
+                          width="100%"
+                          stylename="jmix-drawer-content"/>
+                <timeZoneIndicator id="timeZoneIndicator"
+                                   align="MIDDLE_CENTER"/>
+                <cssLayout id="controlBox"
+                           stylename="jmix-drawer-footer"
+                           width="100%">
+                    <button id="collapseDrawerButton"
+                            icon="CHEVRON_LEFT"
+                            stylename="jmix-drawer-collapse-button"
+                            description="msg://sideMenuCollapse"/>
+                    <userIndicator id="userIndicator"
+                                   align="MIDDLE_CENTER"/>
+                    <logoutButton id="logoutButton"
+                                  icon="SIGN_OUT"
+                                  description="msg://logoutBtnDescription"/>
+                </cssLayout>
+            </drawer>
             <workArea id="workArea"
                       stylename="jmix-workarea"
                       height="100%">
