@@ -1,5 +1,5 @@
 plugins {
-    id 'io.jmix' version '0.9.3'
+    id 'io.jmix' version '1.0.0-M3'
     id 'java'
 }
 
@@ -15,8 +15,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    // mavenLocal()
-    jcenter()
+    mavenCentral()
     maven {
         url 'https://nexus.jmix.io/repository/public'
     }
