@@ -22,6 +22,7 @@ import reactor.core.publisher.FluxSink;
 import javax.annotation.Nonnull;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @GraphQLApi
@@ -32,7 +33,6 @@ public class OrderService {
 
     private final ConcurrentMultiMap<String, FluxSink<Car>> subscribers = new ConcurrentMultiMap<>();
 
-
     @GraphQLQuery
     public List<Order> orders(@GraphQLArgument(name = "order", defaultValue = "amount") String order) {
         return dataManager.load(Order.class)
@@ -41,6 +41,16 @@ public class OrderService {
                 .list();
     }
 
+    @GraphQLQuery
+    public List<CarDto> carDtoList() {
+        return dataManager.load(Car.class).all().list().stream().map(car -> {
+            CarDto carDto = new CarDto();
+            carDto.setManufacturer(car.getManufacturer());
+            carDto.setModel(car.getModel());
+            carDto.setPrice(car.getPrice());
+            return carDto;
+        }).collect(Collectors.toList());
+    }
 
     @GraphQLMutation
     public Product createProduct(@Nonnull String manufacturer, String model, BigDecimal price) {
