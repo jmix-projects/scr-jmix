@@ -1,5 +1,6 @@
 package com.company.scr.entity;
 
+import com.company.scr.entity.constraints.PricePolicyComplaint;
 import com.company.scr.entity.constraints.PurchasedAfterManufactured;
 import com.company.scr.entity.constraints.ReliabilityPolicyCompliant;
 import io.jmix.core.DeletePolicy;
@@ -24,6 +25,7 @@ import java.util.UUID;
 
 @PurchasedAfterManufactured
 @ReliabilityPolicyCompliant
+@PricePolicyComplaint
 @Table(name = "SCR_CAR")
 @JmixEntity
 @Entity(name = "scr$Car")
