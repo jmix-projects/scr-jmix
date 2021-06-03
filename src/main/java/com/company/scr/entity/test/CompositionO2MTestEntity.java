@@ -1,11 +1,15 @@
 package com.company.scr.entity.test;
 
+import io.jmix.core.DeletePolicy;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
+import io.jmix.core.entity.annotation.OnDelete;
+import io.jmix.core.metamodel.annotation.Composition;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.PositiveOrZero;
+import java.util.List;
 import java.util.UUID;
 
 @Table(name = "SCR_COMPOSITION_O2M_TEST_ENTITY")
@@ -35,6 +39,19 @@ public class CompositionO2MTestEntity {
     @InstanceName
     @Column(name = "NAME")
     protected String name;
+
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "compositionO2MTestEntity")
+    protected List<DeeplyNestedO2MTestEntity> deeplyNestedO2Mattr;
+
+    public List<DeeplyNestedO2MTestEntity> getDeeplyNestedO2Mattr() {
+        return deeplyNestedO2Mattr;
+    }
+
+    public void setDeeplyNestedO2Mattr(List<DeeplyNestedO2MTestEntity> deeplyNestedO2Mattr) {
+        this.deeplyNestedO2Mattr = deeplyNestedO2Mattr;
+    }
 
     public Integer getQuantity() {
         return quantity;
