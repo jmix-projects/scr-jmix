@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="scr">
+        <createTable tableName="SCR_DEEPLY_NESTED_O2M_TEST_ENT">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SCRDEEPLYNESTEDO2MTESTENT"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="COMPOSITION_O2M_TEST_ENTITY_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="scr">
+        <addForeignKeyConstraint baseColumnNames="COMPOSITION_O2M_TEST_ENTITY_ID"
+                                 baseTableName="SCR_DEEPLY_NESTED_O2M_TEST_ENT"
+                                 constraintName="FK_SCRDEEPLYNE_ON_COMPOSITION" referencedColumnNames="ID"
+                                 referencedTableName="SCR_COMPOSITION_O2M_TEST_ENTITY"/>
+    </changeSet>
+</databaseChangeLog>
