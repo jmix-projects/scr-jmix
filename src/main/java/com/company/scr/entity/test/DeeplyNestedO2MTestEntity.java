@@ -6,6 +6,7 @@ import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.UUID;
 
 @JmixEntity
@@ -18,6 +19,7 @@ public class DeeplyNestedO2MTestEntity {
     private UUID id;
 
     @Column(name = "NAME")
+    @Size(min = 0, max = 5)
     private String name;
     @JoinColumn(name = "COMPOSITION_O2M_TEST_ENTITY_ID", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
