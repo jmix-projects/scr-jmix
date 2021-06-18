@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @JmixEntity
 @Table(name = "SCR_SPARE_PART")
-@Entity(name = "scr$SparePart")
+@Entity(name = "scr_SparePart")
 public class SparePart {
 
     @JmixGeneratedValue

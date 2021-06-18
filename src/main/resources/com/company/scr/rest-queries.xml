@@ -2,37 +2,37 @@
 
 <queries xmlns="http://jmix.io/schema/rest/queries">
 
-    <query name="allCars" entity="scr$Car" fetchPlan="_">
-        <jpql>select c from scr$Car c</jpql>
+    <query name="allCars" entity="scr_Car" fetchPlan="_">
+        <jpql>select c from scr_Car c</jpql>
     </query>
 
-    <query name="ecoCars" entity="scr$Car" fetchPlan="_local">
-        <jpql>select c from scr$Car c where c.ecoRank = 3</jpql>
+    <query name="ecoCars" entity="scr_Car" fetchPlan="_local">
+        <jpql>select c from scr_Car c where c.ecoRank = 3</jpql>
     </query>
 
-    <query name="ecoCars" entity="scr$Car" fetchPlan="_local">
-        <jpql>select c from scr$Car c where c.ecoRank > :ecoRank</jpql>
+    <query name="ecoCars" entity="scr_Car" fetchPlan="_local">
+        <jpql>select c from scr_Car c where c.ecoRank > :ecoRank</jpql>
         <params>
             <param name="ecoRank" type="java.lang.String"/>
         </params>
     </query>
 
-    <query name="ecoCars" entity="scr$Car" fetchPlan="_local">
-        <jpql>select c from scr$Car c where c.ecoRank = 3 and c.model like :model</jpql>
+    <query name="ecoCars" entity="scr_Car" fetchPlan="_local">
+        <jpql>select c from scr_Car c where c.ecoRank = 3 and c.model like :model</jpql>
         <params>
             <param name="model" type="java.lang.String"/>
         </params>
     </query>
 
-    <query name="carsByType" entity="scr$Car" fetchPlan="_local">
-        <jpql>select c from scr$Car c where c.carType = :carType</jpql>
+    <query name="carsByType" entity="scr_Car" fetchPlan="_local">
+        <jpql>select c from scr_Car c where c.carType = :carType</jpql>
         <params>
             <param name="carType" type="java.lang.String"/>
         </params>
     </query>
 
-    <query name="allCars" entity="scr$FavoriteCar" fetchPlan="_local">
-        <jpql>select f from scr$FavoriteCar f where f.car = :car</jpql>
+    <query name="allCars" entity="scr_FavoriteCar" fetchPlan="_local">
+        <jpql>select f from scr_FavoriteCar f where f.car = :car</jpql>
         <params>
             <param name="car" type="com.company.scr.entity.Car"/>
         </params>

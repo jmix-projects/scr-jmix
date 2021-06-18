@@ -35,7 +35,7 @@
             </fetchPlan>
             <loader id="garagesDl">
                 <query>
-                    <![CDATA[select e from scr$Garage e]]>
+                    <![CDATA[select e from scr_Garage e]]>
                 </query>
             </loader>
         </collection>

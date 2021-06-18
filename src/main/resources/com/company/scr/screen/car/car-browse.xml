@@ -21,7 +21,7 @@
             </fetchPlan>
             <loader id="carsDl">
                 <query>
-                    <![CDATA[select e from scr$Car e]]>
+                    <![CDATA[select e from scr_Car e]]>
                 </query>
             </loader>
         </collection>

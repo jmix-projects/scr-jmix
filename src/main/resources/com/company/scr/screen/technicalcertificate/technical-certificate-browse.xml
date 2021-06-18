@@ -9,7 +9,7 @@
             <fetchPlan extends="_local"/>
             <loader id="technicalCertificatesDl">
                 <query>
-                    <![CDATA[select e from scr$TechnicalCertificate e]]>
+                    <![CDATA[select e from scr_TechnicalCertificate e]]>
                 </query>
             </loader>
         </collection>

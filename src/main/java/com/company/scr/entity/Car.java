@@ -28,7 +28,7 @@ import java.util.UUID;
 @PricePolicyComplaint
 @Table(name = "SCR_CAR")
 @JmixEntity
-@Entity(name = "scr$Car")
+@Entity(name = "scr_Car")
 public class Car {
 
     @JmixGeneratedValue
