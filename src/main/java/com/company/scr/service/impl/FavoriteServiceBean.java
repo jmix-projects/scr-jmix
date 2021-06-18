@@ -46,7 +46,7 @@ public class FavoriteServiceBean implements FavoriteService {
     @Override
     public List<FavoriteCar> getFavorites() {
         return dataManager.load(FavoriteCar.class)
-                .query("select f from scr$FavoriteCar f where f.user.id = :uid")
+                .query("select f from scr_FavoriteCar f where f.user.id = :uid")
                 .parameter("uid", getCurrentUserId())
                 .fetchPlan("favoriteCar-view")
                 .list();
@@ -56,7 +56,7 @@ public class FavoriteServiceBean implements FavoriteService {
     public List<FavoriteCar> getFavoritesByType(CarType carType) {
         return dataManager.load(FavoriteCar.class)
                 .query("" +
-                        "select f from scr$FavoriteCar f " +
+                        "select f from scr_FavoriteCar f " +
                         "where " +
                         "   f.user.id = :uid" +
                         "   and f.car.carType = :carTypeId")

@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Table(name = "SCR_FAVORITE_CAR")
 @JmixEntity
-@Entity(name = "scr$FavoriteCar")
+@Entity(name = "scr_FavoriteCar")
 public class FavoriteCar {
     @JmixGeneratedValue
     @Id

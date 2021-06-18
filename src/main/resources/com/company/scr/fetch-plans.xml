@@ -31,7 +31,7 @@
         <property name="car"
                   fetchPlan="_instance_name"/>
     </fetchPlan>
-    <fetchPlan entity="scr$SparePart" name="sparePart-view" extends="_local">
+    <fetchPlan entity="scr_SparePart" name="sparePart-view" extends="_local">
         <property name="spareParts" fetchPlan="_instance_name"/>
     </fetchPlan>
     <fetchPlan entity="scr_DatatypesTestEntity" name="datatypesTestEntity-view" extends="_local">

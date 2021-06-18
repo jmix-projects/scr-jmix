@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Table(name = "SCR_TECHNICAL_CERTIFICATE")
 @JmixEntity
-@Entity(name = "scr$TechnicalCertificate")
+@Entity(name = "scr_TechnicalCertificate")
 public class TechnicalCertificate {
 
     @JmixGeneratedValue

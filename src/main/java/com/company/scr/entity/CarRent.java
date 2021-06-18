@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Table(name = "SCR_CAR_RENT")
 @JmixEntity
-@Entity(name = "scr$CarRent")
+@Entity(name = "scr_CarRent")
 public class CarRent {
 
     @JmixGeneratedValue
