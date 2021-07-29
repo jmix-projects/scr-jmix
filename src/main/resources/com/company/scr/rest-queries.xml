@@ -2,7 +2,7 @@
 
 <queries xmlns="http://jmix.io/schema/rest/queries">
 
-    <query name="allCars" entity="scr_Car" fetchPlan="_">
+    <query name="allCars" entity="scr_Car" fetchPlan="_local">
         <jpql>select c from scr_Car c</jpql>
     </query>
 
