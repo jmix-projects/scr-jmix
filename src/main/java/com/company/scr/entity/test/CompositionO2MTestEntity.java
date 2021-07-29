@@ -8,6 +8,7 @@ import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.PositiveOrZero;
 import java.util.List;
 import java.util.UUID;
@@ -40,6 +41,7 @@ public class CompositionO2MTestEntity {
     @Column(name = "NAME")
     protected String name;
 
+    @Valid
     @Composition
     @OnDelete(DeletePolicy.CASCADE)
     @OneToMany(mappedBy = "compositionO2MTestEntity")
