@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="scr">
+        <addColumn tableName="SCR_CAR">
+            <column name="COLOR" type="VARCHAR(7)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="2" author="scr">
+        <addForeignKeyConstraint baseColumnNames="ASSOCIATION_M2_OATTR_ID" baseTableName="SCR_DATATYPES_TEST_ENTITY"
+                                 constraintName="FK_SCRDATATYPE_ON_ASSOCIATIONUckSnX" referencedColumnNames="ID"
+                                 referencedTableName="SCR_ASSOCIATION_M2O_TEST_ENTITY"/>
+    </changeSet>
+    <changeSet id="3" author="scr">
+        <addForeignKeyConstraint baseColumnNames="STRING_ID_TEST_ENTITY_ASSOCIATION_M2O_ID"
+                                 baseTableName="SCR_DATATYPES_TEST_ENTITY"
+                                 constraintName="FK_SCRDATATYPE_ON_STRINGIDTES3DutUF" referencedColumnNames="IDENTIFIER"
+                                 referencedTableName="SCR_STRING_ID_TEST_ENTITY"/>
+    </changeSet>
+    <changeSet id="4" author="scr">
+        <addForeignKeyConstraint baseColumnNames="DATATYPES_TEST_ENTITY_ID"
+                                 baseTableName="SCR_DATATYPES_TEST_ENTITY_INTEGER_ID_TEST_ENTITY_LINK"
+                                 constraintName="FK_SCRDATTESEN_ON_DATATYPESTEWiVE3x" referencedColumnNames="ID"
+                                 referencedTableName="SCR_DATATYPES_TEST_ENTITY"/>
+    </changeSet>
+</databaseChangeLog>

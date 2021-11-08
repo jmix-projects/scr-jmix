@@ -43,6 +43,11 @@ public class Car {
     @Column(name = "MODEL")
     protected String model;
 
+    @Column(name = "COLOR", length = 7)
+    @Size(min = 7, max = 7)
+    @Pattern(regexp = "#[\\dA-Fa-f]{6}")
+    protected String color;
+
     @Size(min = 0, max = 5)
     @Pattern(regexp = "[a-zA-Z]{2}\\d{3}")
     @Column(name = "REG_NUMBER", length = 5)
