@@ -15,6 +15,5 @@ public interface FullAccessRole {
     @ScreenPolicy(screenIds = "*")
     @MenuPolicy(menuIds = "*")
     @SpecificPolicy(resources = "*")
-    @GraphQLPolicy(operations = "*")
     void fullAccess();
 }
