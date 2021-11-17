@@ -1,12 +1,12 @@
 plugins {
-    id 'io.jmix' version '1.0.0'
+    id 'io.jmix' version '1.1.0-M8'
     id 'java'
 }
 
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.0.0'
+    bomVersion = '1.1.0-SNAPSHOT'
     projectId = 'scr'
 }
 
@@ -15,6 +15,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url 'https://nexus.jmix.io/repository/public'
@@ -36,14 +37,17 @@ dependencies {
     implementation 'io.jmix.security:jmix-security-oauth2-starter'
     implementation 'io.jmix.graphql:jmix-graphql-starter'
 
+    implementation 'io.jmix.datatools:jmix-datatools-starter'
+    implementation "io.jmix.datatools:jmix-datatools-graphql-starter:1.1.0-SNAPSHOT"
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    runtimeOnly 'org.postgresql:postgresql:42.2.9'
     runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.1'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    implementation("org.postgresql:postgresql")
 }
 
 test {

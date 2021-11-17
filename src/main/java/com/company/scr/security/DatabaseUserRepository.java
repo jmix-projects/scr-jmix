@@ -28,4 +28,14 @@ public class DatabaseUserRepository extends AbstractDatabaseUserRepository<User>
     public void resetRememberMe(Collection<UserDetails> users) {
         throw new UnsupportedOperationException("Not implemented");
     }
+
+    @Override
+    protected User createAnonymousUser() {
+        User user = super.createAnonymousUser();
+        user.setAuthorities(new GrantedAuthoritiesBuilder()
+                .addResourceRole(GraphqlFullAccessRole.CODE)
+                .addResourceRole(FullAccessRole.ROLE_NAME)
+                .build());
+        return user;
+    }
 }
