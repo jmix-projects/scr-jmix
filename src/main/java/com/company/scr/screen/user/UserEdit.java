@@ -2,7 +2,9 @@ package com.company.scr.screen.user;
 
 import com.company.scr.entity.User;
 import io.jmix.core.EntityStates;
+import io.jmix.securityui.screen.roleassignment.RoleAssignmentFragment;
 import io.jmix.ui.Notifications;
+import io.jmix.ui.component.Fragment;
 import io.jmix.ui.component.PasswordField;
 import io.jmix.ui.navigation.Route;
 import io.jmix.ui.screen.*;
@@ -34,11 +36,19 @@ public class UserEdit extends StandardEditor<User> {
 
     @Autowired
     private MessageBundle messageBundle;
+    @Autowired
+    private RoleAssignmentFragment roleAssignmentFragment;
+
+    @Subscribe
+    public void onAfterShow(Screen.AfterShowEvent event){
+        roleAssignmentFragment.setUser(getEditedEntity());
+    }
 
     @Subscribe
     public void onInitEntity(InitEntityEvent<User> event) {
         passwordField.setVisible(true);
         confirmPasswordField.setVisible(true);
+        roleAssignmentFragment.setUser(event.getEntity());
     }
 
     @Subscribe
