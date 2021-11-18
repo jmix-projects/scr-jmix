@@ -4,7 +4,7 @@ import com.company.scr.entity.constraints.PricePolicyComplaint;
 import com.company.scr.entity.constraints.PurchasedAfterManufactured;
 import com.company.scr.entity.constraints.ReliabilityPolicyCompliant;
 import io.jmix.core.DeletePolicy;
-//import io.jmix.core.FileRef;
+import io.jmix.core.FileRef;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.OnDelete;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
@@ -117,7 +117,7 @@ public class Car {
     @Temporal(TemporalType.DATE)
     private Date lastModifiedDate;
 
-/*    @PropertyDatatype("fileRef")
+    @PropertyDatatype("fileRef")
     @Column(name = "PHOTO")
     private FileRef photo;
 
@@ -127,7 +127,7 @@ public class Car {
 
     public void setPhoto(FileRef photo) {
         this.photo = photo;
-    }*/
+    }
 
     public UUID getId() {
         return id;
